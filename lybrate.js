@@ -6,5 +6,5 @@ app.use(express.json());
 
 app.listen(3333, async function (req, res) {
   await connect();
-  console.log("listening");
+  console.log("listening at port 3333");
 });
