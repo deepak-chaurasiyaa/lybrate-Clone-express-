@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% doctor.forEach(function(doctor){%>
+        <div id="grid">
+            <div class="cunsultent">
+                <div>
+                    <img src=<%=doctor.doctorpic %>>
+                </div>
+                <div>
+                    <a class="name" onclick="notsetyet()">
+                        Dr.
+                        Indu Taneja
+                    </a></br>
+                    <div class="degree">DNB, DGO, MBBS</div></br>
+                    <p class="speciality">Gynaecologist</p></br>
+                    <div class="clinicname">Fortis Escorts Hospital - Faridabad, Faridabad</div>
+                </div>
+                <div class="peopleHelped"><span class="heart"><img id="redheart"
+                            src="https://www.lybrate.com/img/i_redHeart.png"></span> 89% (619 votes)</div>
+                <div class="a-yearsExperience">
+                    <span class="d-number">
+                        <span class="i-briefCase"><img id="redheart" src="https://www.lybrate.com/img/i_briefCase.png"></span>
+                        17 Years
+                        Experience
+                    </span>
+                </div>
+                <div class="a-consultationCost">
+                    <span class="i-rupee">
+                        <img id="redheart" class="cost" src="https://www.lybrate.com/img/i_rupee.png">
+                    </span>
+                    <span class="d-text">INR</span>
+                    <span class="d-number">
+                        900
+                    </span>
+                </div>
+                <button onclick="consultnow()" class="cunsoltbutton">Consult Online</button>
+            </div>
+   <% }) %>
+   
+</body>
+</html>
