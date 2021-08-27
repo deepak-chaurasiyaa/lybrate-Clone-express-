@@ -57,6 +57,9 @@ app.use("/question", questionController);
 const answerController = require("./src/controllers/answer.controller");
 app.use("/answer", answerController);
 
+// healthfeed page
+const healthfeedController = require("./src/controllers/healthFeed.controller");
+app.use("/feed", healthfeedController);
 
 
 app.listen(3333, async function (req, res) {
