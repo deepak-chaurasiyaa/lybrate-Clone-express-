@@ -1,19 +1,51 @@
-//--------------- signup Schema--------------------------//
+const express = require("express");
 const mongoose = require("mongoose");
-
-const signupSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true },
-    number: { type: Number, required: true },
-    password: { type: String, required: true },
-    email: { type: String, required: true },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
+const router = express.Router();
+const Signup = require("../models/signup.models");
+router.post("", async (req, res) => {
+  try {
+    const user = await Signup.create(req.body);
+    return res.send(user);
+  } catch (err) {
+    res.status(400).send(err.message);
   }
-);
+});
+router.get("", async (req, res) => {
+  try {
+    const user = await Signup.find().lean().exec();
+    return res.render("users/allUsers");
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
 
-console.log("hi");
-const Signup = mongoose.model("signup", signupSchema);
-module.exports = Signup;
+router.get("/:id", async (req, res) => {
+  try {
+    const user = await Signup.findById(req.params.id).lean().exec();
+    return res.send(user);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+router.patch("/:id", async (req, res) => {
+  try {
+    const user = await Signup.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    return res.send(user);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const user = await Signup.findByIdAndDelete(req.params.id);
+    return res.send(user);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+module.exports = router;

@@ -1,25 +1,65 @@
-//--------------- doctor Schema--------------------------//
+const express = require("express");
 const mongoose = require("mongoose");
-
-const doctorSchema = new mongoose.Schema(
-  {
-    doctorpic: { type: String, required: true },
-    name: { type: String, required: true },
-    degree: { type: String, required: true },
-    speciality: { type: String, required: true },
-    clinicname: { type: String, required: true },
-    votes: { type: String, required: true },
-    redheart: { type: String, required: true },
-    bag: { type: String, required: true },
-    experience: { type: String, required: true },
-    rupee: { type: String, required: true },
-    price: { type: Number, required: true },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
+const router = express.Router();
+const Doctor = require("../models/doctor.models");
+router.post("", async (req, res) => {
+  try {
+    const doctor = await Doctor.create(req.body);
+    return res.send(doctor);
+  } catch (err) {
+    res.status(400).send(err.message);
   }
-);
+});
+router.get("", async (req, res) => {
+  try {
+    const doctor = await Doctor.find().lean().exec();
+    return res.render("doctors/alldoctors", {
+      doctor: doctor,
+    });
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
 
-const Doctor = mongoose.model("doctor", doctorSchema);
-module.exports = Doctor;
+router.get("/consultnow", async (req, res) => {
+  try {
+    // const doctor = await Doctor.find().lean().exec();
+
+    return res.render("doctors/consultnow");
+    // doctor: doctor,
+    //});
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const doctor = await Doctor.findById(req.params.id).lean().exec();
+    return res.send(doctor);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+router.patch("/:id", async (req, res) => {
+  try {
+    const doctor = await Doctor.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    return res.send(doctor);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const doctor = await Doctor.findByIdAndDelete(req.params.id);
+    return res.send(doctor);
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+module.exports = router;
