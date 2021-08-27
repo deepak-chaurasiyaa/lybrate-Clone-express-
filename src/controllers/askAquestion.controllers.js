@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Question = require("../models/askAquestion.model");
 
-router.get("/ask", (request, response) => {
+router.get("", (request, response) => {
     response.render("allQuestions.view.ejs");
 })
 router.post('', async (request, response) => {
@@ -10,9 +10,5 @@ router.post('', async (request, response) => {
 
     response.redirect('back');
 
-})
-router.get('', async (request, response) => {
-    const questions = await Question.find().lean().exec();
-    return response.send(questions);
 })
 module.exports = router;

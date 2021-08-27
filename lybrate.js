@@ -17,12 +17,16 @@ app.set("view engine", "ejs")
 
 //session 
 app.use(session({
-  secret:'secret',
-  cookie:{maxAge: 60000},
-  resave:false,
-  saveUninitialized:false
+  secret: 'secret',
+  cookie: { maxAge: 60000 },
+  resave: false,
+  saveUninitialized: false
 }))
+// flash
 app.use(flash());
+
+// images folder
+app.use(express.static("./src/public"));
 
 //questions page link
 const userQuestion = require("./src/controllers/askAquestion.controllers")
@@ -30,11 +34,11 @@ app.use("/questions", userQuestion);
 
 // login
 const loginController = require("./src/controllers/login.controller");
-app.use("/login",loginController);
+app.use("/login", loginController);
 
 // signup
 const signupController = require("./src/controllers/signup.controller");
-app.use("/signup",signupController);
+app.use("/signup", signupController);
 
 app.listen(3333, async function (req, res) {
   await connect();
