@@ -53,6 +53,12 @@ app.use("/bookAppointment", bookAppointment);
 const questionController = require("./src/controllers/question.controller");
 app.use("/question", questionController);
 
+// prescriptions answer page
+const answerController = require("./src/controllers/answer.controller");
+app.use("/answer", answerController);
+
+
+
 app.listen(3333, async function (req, res) {
   await connect();
   console.log("listening at port 3333");

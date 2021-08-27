@@ -133,7 +133,8 @@ p a {
   background: rgb(88, 88, 88);
   color: white;
   margin-top: 30px;
-  height: 250px;
+  /* height: 250px; */
+  width: 100%;
 }
 
 .detailsAndPages {

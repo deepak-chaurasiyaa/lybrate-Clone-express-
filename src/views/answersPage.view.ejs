@@ -18,7 +18,7 @@
         </div>
         <div id="container">
             <p><a href="../health_feed/health_feed.html">Health Feed</a></p>
-            <p><a href="/prescription/question" style="font-size: 18px;">Questions</a> </p>
+            <p><a href="/question" style="font-size: 18px;">Questions</a> </p>
             <p>View Profile</p>
         </div>
     </div>
@@ -30,15 +30,48 @@
     <div id="centraldiv">
         <!-- questions and answers section -->
         <div id="qnaPart">
+            <% let count=0 %>
+                <% questions.forEach(ele=> { %>
+                    <% if(ele.answer!=" " && ele.answer!=undefined){ %>
+                        <% count++ %>
+                            <div class="eachElement">
+                                <div class="dateOfPost">
+                                    <p>
+                                        <%= ele.createdAt %>
+                                    </p>
+                                    <p>
+                                        Age : <%= Math.floor(Math.random() * 60) + 20; %>
+                                    </p>
+                                    <p>
+                                        Gender : <%= ele.gender %>
+                                    </p>
+                                </div>
+                                <div class="questionAsked">
+                                    <%= ele.question%>
+                                </div>
+                                <div class=" response">
+                                    <p>
+                                        <%=ele.answer %>
+                                    </p>
+                                </div>
+                                <div class="SubmitAnswer">
+                                    <i style="font-size:24px" class="fa">&#xf2c6;</i>
+                                    <button>Change Response</button>
+                                </div>
+
+                            </div>
+                            <% } %>
+                                <% }); %>
         </div>
+
         <!-- questions count -->
         <div id="availableQuestions">
             <p>ANSWERED QUESTIONS</p>
-            <P id="answersCount">0</P>
+            <P id="answersCount">
+                <%= count %>
+            </P>
         </div>
-
     </div>
-
     <!-- ending and footer of page -->
     <div id="otherDetails">
         <div class="detailsAndPages">
