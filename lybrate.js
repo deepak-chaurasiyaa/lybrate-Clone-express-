@@ -1,6 +1,6 @@
 const express = require("express");
 
-const path = require("path");
+const path = require('path');
 const app = express();
 const connect = require("./src/configs/db");
 app.use(express.json());
@@ -8,22 +8,25 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 // html pages link
-app.set("views", path.join(__dirname, "src/views"));
+app.set('views', path.join(__dirname, 'src/views'))
 // style sheets
 app.use("/static", express.static(path.join(__dirname, "src/styleSheets")));
 
-app.use(express.urlencoded({ extended: false }));
-app.set("view engine", "ejs");
 
-//session
-app.use(
-  session({
-    secret: "secret",
-    cookie: { maxAge: 60000 },
-    resave: false,
-    saveUninitialized: false,
-  })
-);
+app.use(express.urlencoded({
+  extended: true
+})); // to support URL-encoded bodies
+
+// app.use(express.urlencoded({ extended: false }))
+app.set("view engine", "ejs")
+
+//session 
+app.use(session({
+  secret: 'secret',
+  cookie: { maxAge: 60000 },
+  resave: false,
+  saveUninitialized: false
+}))
 // flash
 app.use(flash());
 
@@ -46,11 +49,29 @@ app.use("/login", loginController);
 const signupController = require("./src/controllers/signup.controller");
 app.use("/signup", signupController);
 
-// bookApPointment
+// bookApPointment 
 const bookAppointment = require("./src/controllers/bookAppointment.controller");
 app.use("/bookAppointment", bookAppointment);
 
-app.listen(process.env.port || 3333, async function (req, res) {
+// prescriptions question page
+const questionController = require("./src/controllers/question.controller");
+app.use("/question", questionController);
+
+// prescriptions answer page
+const answerController = require("./src/controllers/answer.controller");
+app.use("/answer", answerController);
+
+// healthfeed page
+const healthfeedController = require("./src/controllers/healthFeed.controller");
+app.use("/feed", healthfeedController);
+
+// consltnow
+const doctorController = require("./src/controllers/doctor.controller");
+app.use("/doctor", doctorController);
+
+
+
+app.listen(3333, async function (req, res) {
   await connect();
   console.log("listening at port 3333");
 });

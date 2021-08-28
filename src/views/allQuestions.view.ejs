@@ -25,9 +25,10 @@
                 <p>Get brief answers for your health queries from top Doctors. Its FREE!</p>
                 <div id="innerBox">
                     <p>What is your question?</p>
-                    <form action="/questions" method="POST">
+                    <form action="/askQuestion" method="POST">
                         <textarea id="inp" rows="5" cols="33" name="question"
-                            placeholder="Enter questions for you or someone else. For e.g. I am 25 year old female and have backache for last 2 months. I have used a pain relief ointment cream for couple of days but havent got relief. What should i do now?"></textarea>
+                            placeholder="Enter questions for you or someone else. For e.g. I am 25 year old female and have backache for last 2 months. I have used a pain relief ointment cream for couple of days but havent got relief. What should i do now?"
+                            requied></textarea>
                         <p id="quality">Question Quality:<span>Low</span></p>
                         <p>I am a, </p>
                         <select class="ip" id="ip1" name="gender">
@@ -37,8 +38,15 @@
                         </select>
 
                         <p>Where should we send secure notifications?</p>
+<<<<<<< HEAD
                         <input id="mail" class="email one" type="email" placeholder="Your Email Address" name="email" />
                         <input id="mob" class="email" type="number" placeholder="Your Mobile Number" name="mobile" />
+=======
+                        <input id="mail" class="email one" type="email" placeholder="Your Email Address" name="email"
+                            required />
+                        <input id="mob" class="email" type="number" placeholder="Your Mobile Number" name="mobile"
+                            required />
+>>>>>>> 0fd5ac6fab92429183aec23c6682a678a796abf1
                         <button type="submit">Ask FREE Question Securely</button>
                     </form>
                     <p id="lastP">Complete privacy and anonymity guaranteed • Quick responses</p>
