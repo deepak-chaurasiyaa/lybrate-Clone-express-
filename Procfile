@@ -1,1 +1,1 @@
-web: node src/lybrate.js
+web: node lybrate.js
