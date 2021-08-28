@@ -50,7 +50,7 @@ app.use("/signup", signupController);
 const bookAppointment = require("./src/controllers/bookAppointment.controller");
 app.use("/bookAppointment", bookAppointment);
 
-app.listen(3333, async function (req, res) {
+app.listen(process.env.port || 3333, async function (req, res) {
   await connect();
   console.log("listening at port 3333");
 });
