@@ -1,8 +1,8 @@
 const express = require("express");
 const app = new express();
 const connect = require("./configs/db");
-const signupController = require("./configs/controllers/signup.controller");
-const doctorController = require("./configs/controllers/doctor.controller");
+const signupController = require("./controllers/signup.controller");
+const doctorController = require("./controllers/doctor.controller");
 const path = require("path");
 app.use(express.json());
 

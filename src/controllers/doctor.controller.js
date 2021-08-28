@@ -13,7 +13,7 @@ router.post("", async (req, res) => {
 router.get("", async (req, res) => {
   try {
     const doctor = await Doctor.find().lean().exec();
-    return res.render("doctors/alldoctors", {
+    return res.render("alldoctors", {
       doctor: doctor,
     });
   } catch (err) {
@@ -25,14 +25,24 @@ router.get("/consultnow", async (req, res) => {
   try {
     // const doctor = await Doctor.find().lean().exec();
 
-    return res.render("doctors/consultnow");
-    // doctor: doctor,
+    return res.render("consultnow");
+    // doctor: doctor,///login
     //});
   } catch (err) {
     res.status(400).send(err.message);
   }
 });
 
+// router.get("/login", async (req, res) => {
+//   try {
+//     // const doctor = await Doctor.find().lean().exec();
+//     // return res.render("loginview");
+//     // doctor: doctor,///login
+//     //});
+//   } catch (err) {
+//     res.status(400).send(err.message);
+//   }
+// });
 router.get("/:id", async (req, res) => {
   try {
     const doctor = await Doctor.findById(req.params.id).lean().exec();
