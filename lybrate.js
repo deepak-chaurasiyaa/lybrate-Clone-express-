@@ -65,7 +65,9 @@ app.use("/feed", healthfeedController);
 const doctorController = require("./src/controllers/doctor.controller");
 app.use("/doctor", doctorController);
 
-
+// doctor login
+const doctorLoginController = require("./src/controllers/doctorLogin.controller");
+app.use("/doctorLogin", doctorLoginController);
 
 app.listen(3333, async function (req, res) {
   await connect();
