@@ -3,7 +3,7 @@ clone of website lybrate (https://www.lybrate.com/?lpt=NAV)
 
 ### welcome to this repo,
 
-as part of unit3 construct week our team ([Harsh Chaturvedi](harshchaturvedi1),[Sagar Biswas](mrsagar105), [Ankur Anand](ankuranand598),[Deepak Chourasiya](deepak-chaurasiyaa)) was asigned a task to clone the website lybrate(https://www.lybrate.com/?lpt=NAV), we have worked whole one week and given our best to clone in the best possible way we can.
+as part of unit3 construct week our team ([Harsh Chaturvedi](harshchaturvedi1),  [Sagar Biswas](mrsagar105), [Ankur Anand](ankuranand598),[Deepak Chourasiya](deepak-chaurasiyaa)) was asigned a task to clone the website lybrate(https://www.lybrate.com/?lpt=NAV), we have worked whole one week and given our best to clone in the best possible way we can.
 
 ### TOOLS AND TECHNOLOGY USED >
 
