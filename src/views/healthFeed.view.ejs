@@ -14,7 +14,7 @@
         <div class="topbar">
             <div class="container">
                 <a href="https://www.lybrate.com/mobile?lpt=HOME">Get the App</a>
-                <a href="../ForDoctors/fordoctors.html">For Doctors</a>
+                <a href="/fordoctors">For Doctors</a>
                 <a href="/feed">Health Feed</a>
                 <a href="/signup">Login/Sign-up</a>
             </div>
@@ -25,7 +25,7 @@
                 <div class="logo_container">
                     <img class="logo"
                         src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png"
-                        alt="lybrate">
+                        alt="lybrate" onclick="homePage()">
                 </div>
 
                 <div class="nav_and_cart_section">
@@ -43,7 +43,7 @@
                         <div>
                             <img src="https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Consult-Online.png"
                                 alt="">
-                            <a href="../consultonline/consultonline.html">Consult Online</a>
+                            <a href="/doctor">Consult Online</a>
                         </div>
                         <div>
                             <img src="https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Book-Lab-test.png"
@@ -188,47 +188,42 @@
             </div>
         </div>
 
-        <%    let z = 0 %> 
-        
-        
-       <!-- blog filled in runtime -->
-        <% questions.forEach(ele=> { %>
-            <% if(ele.answer!=" " && ele.answer!=undefined){ %>
-                <%       if (z == 4){%>
-                    <%           z = 0%>
-                    <% } %> 
-                    <div class="containerPost">
-                        <p>Health Query</p>
-                        <a href="treatmentPost">
-                            <p class="postTitle"><%= ele.question %> </p>
-                        </a>
-                        <hr style="margin:20px">
-                        <div class="doctorPart">
-                            <img class="doctorImage"
-                                src="<%=fedAr[z].doc  %> "
-                                alt="">
-                            <p class="doctorName"><a href="descrption"><%=fedAr[z].name  %> </a></p>
-                            <p class='doctorDetails'>MBBS, Bachelor of Unani Medicine and Surgery (B.U.M.S) Unani Specialist, Kanpur
-                                • 17yrs exp</p>
-                            <p class="PersonImage"><a href=""><img
-                                        src="<%= fedAr[z++].pat  %> "
-                                        alt=""></a></p>
-                            <p class="solution"><span>Hello, thanks for the query.</span>
-                                <br>
-                                <span> <%=ele.answer  %> <a
-                                        href="extraPart" class="extraPart">more</a></span>
-                            </p>
-                        </div>
-                        <div class="actionButtons">
-                            <a href="submitFeedback"><i class="far fa-comment-alt"></i>Submit FeedBack</a>
-                            <a href="comments"><i class="far fa-comments"></i>Consult-Online</a>
-                            <a href="apointment"><i class="far fa-calendar-alt"></i>Book-Appointment</a>
-                        </div>
+        <%    let z = 0 %>
 
-                    </div>    
-                    <% } %>
-                <% }) %>
-        
+
+        <!-- blog filled in runtime -->
+        <% questions.forEach(ele=> { %>
+        <% if(ele.answer!=" " && ele.answer!=undefined){ %>
+        <%       if (z == 4){%>
+        <%           z = 0%>
+        <% } %>
+        <div class="containerPost">
+            <p>Health Query</p>
+            <a href="treatmentPost">
+                <p class="postTitle"><%= ele.question %> </p>
+            </a>
+            <hr style="margin:20px">
+            <div class="doctorPart">
+                <img class="doctorImage" src="<%=fedAr[z].doc  %> " alt="">
+                <p class="doctorName"><a href="descrption"><%=fedAr[z].name  %> </a></p>
+                <p class='doctorDetails'>MBBS, Bachelor of Unani Medicine and Surgery (B.U.M.S) Unani Specialist, Kanpur
+                    • 17yrs exp</p>
+                <p class="PersonImage"><a href=""><img src="<%= fedAr[z++].pat  %> " alt=""></a></p>
+                <p class="solution"><span>Hello, thanks for the query.</span>
+                    <br>
+                    <span> <%=ele.answer  %> <a href="extraPart" class="extraPart">more</a></span>
+                </p>
+            </div>
+            <div class="actionButtons">
+                <a href="submitFeedback"><i class="far fa-comment-alt"></i>Submit FeedBack</a>
+                <a href="comments"><i class="far fa-comments"></i>Consult-Online</a>
+                <a href="apointment"><i class="far fa-calendar-alt"></i>Book-Appointment</a>
+            </div>
+
+        </div>
+        <% } %>
+        <% }) %>
+
 
     </div>
 

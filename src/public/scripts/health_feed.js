@@ -1,11 +1,14 @@
-let x = document.body.addEventListener('click', function (event) {
-    console.log(event.target.id);
-    if (event.target.id != "search")
-        document.getElementById('dropDown').style.display = 'none'
-    else
-        document.getElementById('dropDown').style.display = 'block'
-})
+let x = document.body.addEventListener("click", function (event) {
+  console.log(event.target.id);
+  if (event.target.id != "search")
+    document.getElementById("dropDown").style.display = "none";
+  else document.getElementById("dropDown").style.display = "block";
+});
 
 function gotoHome() {
-    window.location.href = "/feed"
+  window.location.href = "/feed";
+}
+
+function homePage() {
+  window.location.href = "/";
 }
