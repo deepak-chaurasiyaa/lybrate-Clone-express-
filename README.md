@@ -7,7 +7,7 @@ as part of unit2 construct week our team(sagar, deepak, ankur and harsh) was asi
 
 ### TOOLS AND TECHNOLOGY USED >
 
-- HTML
+- HTML (through ejs)
 - css
 - javascript
 - js dom manipulation
@@ -18,7 +18,7 @@ as part of unit2 construct week our team(sagar, deepak, ankur and harsh) was asi
 ### Node packages and libraries
 
 - connect-flash      :  0.1.1
-- ejs                :  3.1.6
+- ejs (templeate engine) :  3.1.6
 - express-session    :  1.17.2
 - mongoose           :  5.11.15
 - express(framework) :  4.17.1
