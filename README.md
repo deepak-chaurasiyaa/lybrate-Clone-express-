@@ -14,6 +14,7 @@ as part of unit2 construct week our team(sagar, deepak, ankur and harsh) was asi
 - font Awesom icons
 - bootstrap (for styling flash mesage)
 - Nodejs    
+- mongodb atlas (for database)
 
 ### Node packages and libraries
 
