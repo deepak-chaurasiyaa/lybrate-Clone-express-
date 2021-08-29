@@ -20,7 +20,7 @@ function authenticate() {
         else if (password != '12')
             alert('Enter correct password!');
         else {
-            window.location.href = '/question';
+            window.location.href = '/doctorLogin/doctorHalt';
         }
     }
 }
