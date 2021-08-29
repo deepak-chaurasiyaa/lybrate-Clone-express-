@@ -15,7 +15,6 @@ router.get("", async function (req, res) {
     const quizzes = await Quiz.find().populate("doctorId").lean().exec();
     const tips = await Tip.find().populate("doctorId").lean().exec();
 
-    console.log("questions: ", questions);
     return res.render("index.view.ejs", {
       questions: questions,
       videos: videos,

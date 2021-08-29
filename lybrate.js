@@ -69,6 +69,10 @@ app.use("/feed", healthfeedController);
 const doctorController = require("./src/controllers/doctor.controller");
 app.use("/doctor", doctorController);
 
+// for doctors page
+const forDoctors = require("./src/controllers/forDoctors.controller");
+app.use("/fordoctors", forDoctors);
+
 
 
 app.listen(3333, async function (req, res) {
