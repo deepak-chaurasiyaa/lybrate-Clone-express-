@@ -3,11 +3,11 @@ clone of website lybrate (https://www.lybrate.com/?lpt=NAV)
 
 ### welcome to this repo,
 
-as part of unit2 construct week our team(sagar, deepak, ankur and harsh) was asigned a task to clone the website lybrate(https://www.lybrate.com/?lpt=NAV), we have worked 4 days straight day and night and given our best to clone in the best possible way we can.
+as part of unit3 construct week our team(sagar, deepak, ankur and harsh) was asigned a task to clone the website lybrate(https://www.lybrate.com/?lpt=NAV), we have worked whole one week and given our best to clone in the best possible way we can.
 
 ### TOOLS AND TECHNOLOGY USED >
 
-- HTML (through ejs)
+- HTML (through ejs templeate engine)
 - css
 - javascript
 - js dom manipulation
@@ -23,6 +23,7 @@ as part of unit2 construct week our team(sagar, deepak, ankur and harsh) was asi
 - express-session    :  1.17.2
 - mongoose           :  5.11.15
 - express(framework) :  4.17.1
+- nodemon : 2.0.12
 
 #### WEBSITE CONTENT CLONED>
 
