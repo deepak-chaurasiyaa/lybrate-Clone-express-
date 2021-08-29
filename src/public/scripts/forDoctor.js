@@ -1,3 +1,3 @@
 function gotologin() {
-  window.location.href = "/login";
+  window.location.href = "/doctorLogin";
 }
