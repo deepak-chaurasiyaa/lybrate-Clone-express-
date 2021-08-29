@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384- 
     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/prescription.question.css">
 </head>
 
 <body>
-
+    <% if(message.length>0){ %>
+        <div class="alert alert-success message" role="alert">
+            <p><%= message %> </p>
+        </div>
+        <% } %>
     <!-- top navbar -->
     <div id="headImage">
         <div>
@@ -30,6 +36,7 @@
 
 
     <div id="centraldiv">
+        <% questions.reverse() %> 
         <!-- questions and answers section -->
         <div id="qnaPart">
             <% let eachId=1 %>

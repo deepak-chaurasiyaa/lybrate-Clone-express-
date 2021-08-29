@@ -4,6 +4,9 @@ body {
 #head {
   background-color: white;
 }
+.message{
+text-align: center;
+}
 #divImg > img {
   height: 35px;
   width: 130px;

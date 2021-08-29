@@ -3,10 +3,19 @@
 <title>Ask a doctor</title>
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/askAQuestion.css">
 </head>
 
 <body>
+   <%  if(message != undefined){ %>
+    <% if(message.length>0){ %>
+        <div class="alert alert-success message" role="alert">
+            <p><%= message %> </p>
+        </div>
+        <% } %>
+        <% } %>
     <div id="head">
         <div id="divImg">
             <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/lybrate-logo-new.png" />
@@ -87,3 +96,9 @@
 </body>
 
 </html>
+
+<script>
+        function gotoDoctors() {
+            window.location.href = "/fordoctors";
+        }
+    </script>

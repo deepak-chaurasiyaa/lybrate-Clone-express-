@@ -7,6 +7,9 @@ body {
   scroll-behavior: smooth;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.message{
+  text-align: center;
+}
 /* top navbar */
 #headImage {
   display: grid;

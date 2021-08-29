@@ -5,7 +5,7 @@ const Questions = require("../models/askAquestion.model")
 router.get("", async (request, response) => {
     const data = await Questions.find().lean().exec();
     // console.log(data);
-    response.render("questionPage.view.ejs", { questions: data });
+    response.render("questionPage.view.ejs", { questions: data ,message:request.flash("message")});
 })
 
 router.post("", async (req, res) => {
@@ -18,13 +18,14 @@ router.post("", async (req, res) => {
                 console.log("before", ele)
                 try {
                     const updated = await Questions.findByIdAndUpdate(ele._id, ele, { new: true }).lean().exec();
-                    console.log("updated", updated)
+                    
                 }
                 catch (er) {
                     console.log(er.message)
                 }
             }
         })
+        req.flash("message", "Answer Submitted!");
         res.redirect("/question")
     } catch (err) {
         console.log(err.message);

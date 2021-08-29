@@ -3,11 +3,11 @@ const router = express.Router();
 const Question = require("../models/askAquestion.model");
 
 router.get("", (request, response) => {
-  response.render("allQuestions.view.ejs");
+  response.render("allQuestions.view.ejs",{message:request.flash("message")});
 });
 router.post("", async (request, response) => {
   const question = await Question.create(request.body);
-
-  response.redirect("back");
+  request.flash("message", "Query Submitted!");
+  response.redirect("back")
 });
 module.exports = router;
