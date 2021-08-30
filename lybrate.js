@@ -4,9 +4,9 @@ const path = require('path');
 const app = express();
 const connect = require("./src/configs/db");
 app.use(express.json());
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, "./src/askAquestion/views"))
 app.use(express.urlencoded({ extended: false }))
-app.use("/static", express.static(path.join(__dirname, "views")));
+app.use("/static", express.static(path.join(__dirname, "./src/askAquestion/views")));
 app.set("view engine", "ejs")
 
 //questions page link
