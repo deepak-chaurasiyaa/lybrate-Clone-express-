@@ -15,13 +15,12 @@ router.post("", async (req, res) => {
         data.forEach(async (ele) => {
             if (String(ele._id) == key) {
                 ele.answer = req.body[key + ' '];
-                console.log("before", ele)
                 try {
                     const updated = await Questions.findByIdAndUpdate(ele._id, ele, { new: true }).lean().exec();
                     
                 }
                 catch (er) {
-                    console.log(er.message)
+                    res.send("error")
                 }
             }
         })

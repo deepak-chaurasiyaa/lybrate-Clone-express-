@@ -204,18 +204,27 @@ input {
   color: rgb(150, 149, 149);
 }
 
-#form p a {
+#form p a,a {
   color: rgb(187, 28, 28);
   font-size: 13px;
 }
 
 #loginButon {
-  background: rgb(189, 13, 13);
+  background: rgb(187, 28, 28);
   color: white;
   height: 100%;
   display: flex;
   font-size: 17px;
   justify-content: center;
+}
+.doctorsP{color: rgb(182, 181, 181); 
+  margin: 7px;
+}
+button{
+  width:100%;
+   height:100%;
+   background:rgb(187, 28, 28);
+   outline: none;
 }
 
 #noaccount {

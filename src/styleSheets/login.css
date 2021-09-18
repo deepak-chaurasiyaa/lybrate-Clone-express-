@@ -213,7 +213,26 @@ input {
   font-size: 17px;
   justify-content: center;
 }
-
+.doctorsP{
+  color: rgb(182, 181, 181);
+   margin: 7px;
+}
+button{
+  width:100%; 
+  border:none; 
+  height:100%;
+  background: inherit;
+}
+.buttonA{
+  background: rgb(189, 13, 13) ;
+}
+.started{
+  color: red;
+}
+.buttonP{
+  margin-top:15px;
+   margin-bottom:15px;
+}
 #noaccount {
   font-size: 13px;
   text-align: center;

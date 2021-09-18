@@ -153,3 +153,7 @@ p {
 #consulter {
   margin: 10px;
 }
+/* removing inline css */
+.consultImages{margin-left: -470px; 
+  margin-top: 6px 
+}

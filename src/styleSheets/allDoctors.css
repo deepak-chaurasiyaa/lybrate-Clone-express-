@@ -328,3 +328,11 @@ h2 {
   grid-template-columns: 120px 120px 120px;
   justify-content: center;
 }
+
+/* removing inline css */
+.doctorsImageCss{
+  margin-left: -330px; 
+  margin-top: 6px
+}
+.doctors2Div{color: rgb(255, 255, 255); height: 550px;
+}
