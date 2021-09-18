@@ -4,7 +4,6 @@ const Questions = require("../models/askAquestion.model")
 
 router.get("", async (request, response) => {
     const data = await Questions.find().lean().exec();
-    // console.log(data);
     response.render("questionPage.view.ejs", { questions: data ,message:request.flash("message")});
 })
 
@@ -27,7 +26,6 @@ router.post("", async (req, res) => {
         req.flash("message", "Answer Submitted!");
         res.redirect("/question")
     } catch (err) {
-        console.log(err.message);
         res.redirect("/question");
     }
 })
