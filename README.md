@@ -1,9 +1,14 @@
 # lybrate-Clone
-clone of website lybrate (https://www.lybrate.com/?lpt=NAV)
+Lookalike of website [lybrate.com](https://www.lybrate.com/?lpt=NAV)
 
 ### welcome to this repo,
 
-as part of unit3 construct week our team ([Harsh Chaturvedi](https://github.com/harshchaturvedi1),  [Sagar Biswas](https://github.com/mrsagar105), [Ankur Anand](https://github.com/ankuranand598),[Deepak Chourasiya](https://github.com/deepak-chaurasiyaa)) was asigned a task to clone the website [Lybrate](https://www.lybrate.com/?lpt=NAV), we have worked whole one week and given our best to clone in the best possible way we can.
+We a team of 4 members([Harsh Chaturvedi](https://github.com/harshchaturvedi1),  [Sagar Biswas](https://github.com/mrsagar105),
+[Ankur Anand](https://github.com/ankuranand598),[Deepak Chourasiya](https://github.com/deepak-chaurasiyaa)), with the best of our skills have completed the project in 5 days.
+<br>
+In case of any suggestion or query feel free to reach out to us. 
+<br>
+Take a look - [Demo](https://lybrate.herokuapp.com/)
 
 ### TOOLS AND TECHNOLOGY USED >
 
@@ -41,6 +46,8 @@ as part of unit3 construct week our team ([Harsh Chaturvedi](https://github.com/
 
 ![Home](src/public/images/askques.png)
 
+_To explore further follow_ - [Demo](https://lybrate.herokuapp.com/)
+
 ### WEBSITE USER FLOW >
 
 the user flow that we tried to maintain is,
@@ -52,6 +59,12 @@ also, to explore
 > home -> consultOnline -> consultNow
 > home -> goodcart ->home
 
-### MESSAGE FROM TEAM >
+### TEAM MEMBERS>
 
 _we really enjoyed this whole part of clonning and have given our best efforts to bring the BEST thing as POSSIBLE._
+<br>
+[Harsh Chaturvedi](https://github.com/harshchaturvedi1)<br>
+[Sagar Biswas](https://github.com/mrsagar105)<br>
+[Ankur Anand](https://github.com/ankuranand598)<br>
+[Deepak Chourasiya](https://github.com/deepak-chaurasiyaa)
+
