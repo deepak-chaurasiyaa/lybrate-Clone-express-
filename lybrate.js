@@ -2,6 +2,7 @@ const express = require("express");
 
 const path = require("path");
 const app = express();
+const port = process.env.PORT || 3333
 const connect = require("./src/configs/db");
 app.use(express.json());
 const session = require("express-session");
@@ -80,7 +81,7 @@ app.use("/fordoctors", forDoctors);
 const doctorLoginController = require("./src/controllers/doctorLogin.controller");
 app.use("/doctorLogin", doctorLoginController);
 
-app.listen(3333, async function (req, res) {
+app.listen(port, async function (req, res) {
   await connect();
-  console.log("listening at port 3333");
+  console.log(`listening at port ${port}`);
 });
