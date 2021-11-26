@@ -38,12 +38,17 @@ app.use(flash());
 app.use(express.static("./src/public"));
 
 // homepage (index)
+
 const homePage = require("./src/controllers/index.controller");
 app.use("", homePage);
 
 //questions page link
 const userQuestion = require("./src/controllers/askAquestion.controllers");
 app.use("/askQuestion", userQuestion);
+
+//payment page
+const payment = require("./src/controllers/payment.controller");
+app.use("/payment", payment);
 
 // login
 const loginController = require("./src/controllers/login.controller");
